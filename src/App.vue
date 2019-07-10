@@ -105,19 +105,12 @@ li.completed{
   text-decoration: line-through;
 }
 
-
+ul{
+  padding: 0px;
+}
 
 .todo-list{
   background-color: #FFFFFF;
-  width: 70%;
 }
 
-.todo-list li.editing .edit{
-  display: block;
-  padding: 10px;
-}
-
-.todo-list li.editing .view{
-  display: none;
-}
 </style>
