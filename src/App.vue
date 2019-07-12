@@ -1,10 +1,11 @@
 <template>
   <div class="container">
-    <h1> Your To do List!</h1>
+    <h1 class="title"> Your To do List!</h1>
+    <md-card>
     <section class="input-panel">
       <md-field>
         <md-input v-model="currentTodo" @keyup.enter="addTodo()" placeholder="Add a todo"></md-input>
-        </md-field>
+      </md-field>
     </section>
     <section class="list">
       <ul class="todo-list">
@@ -25,6 +26,11 @@
         </li>
       </ul>
     </section>
+    </md-card>
+    <footer>
+      <p>Double-click to edit an item</p>
+      <p>Created by Zachary Linzmeyer</p>
+    </footer>
   </div>
 </template>
 
@@ -74,12 +80,16 @@ export default {
 <style>
 body{
   background-color: #E83636;
-  margin: 0 auto;
 }
 
 .container{
-  width: 70%;
-  margin: 5px;
+  width: 50%;
+  margin: auto;
+  text-align: center;
+}
+
+.md-input{
+  text-align: center;
 }
 
 .input-panel, li{
@@ -111,6 +121,14 @@ ul{
 
 .todo-list{
   background-color: #FFFFFF;
+}
+
+.title{
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
 
 </style>
